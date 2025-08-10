@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin: -20px -20px 20px -20px;
+        }
+        main {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #444;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 0 10px;
+            color: #0056b3;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #295e35;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #3b6844;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .media-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        video, audio {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Enhanced Web Content & HTML5 Forms</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview and Schedule</h2>
+            <p>Welcome to our project planning page. Below you will find a summary of key milestones and tasks.</p>
+
+            <h3>Project Milestones</h3>
+            <ul>
+                <li>Phase 1: Research and Planning</li>
+                <li>Phase 2: Development and Prototyping</li>
+                <li>Phase 3: Testing and Quality Assurance</li>
+                <li>Phase 4: Launch and Post-Launch Support</li>
+            </ul>
+
+            <h3>Task Timeline</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Design Mockups</td>
+                        <td>2025-08-15</td>
+                        <td>2025-08-22</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Frontend Development</td>
+                        <td>2025-08-25</td>
+                        <td>2025-09-10</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>Backend API Integration</td>
+                        <td>2025-09-01</td>
+                        <td>2025-09-20</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="media-section">
+            <h2>Media Content</h2>
+            <p>Watch a brief promotional video and listen to our project's theme music.</p>
+            <video controls width="500">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <h2>Contact and Feedback Form</h2>
+            <p>Please fill out the form below to get in touch with us or provide feedback.</p>
+            
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full_name" placeholder="John Doe" required autocomplete="name" minlength="2">
+                </p>
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required autocomplete="email">
+                </p>
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel">
+                    <small>Format: 123-456-7890 (optional)</small>
+                </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback Details</legend>
+                    <p>
+                        <label for="subject">Subject:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Please choose a subject --</option>
+                            <option value="support">Technical Support</option>
+                            <option value="feedback">General Feedback</option>
+                            <option value="inquiry">Sales Inquiry</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your detailed message here..." required></textarea>
+                    </p>
+                    <p>
+                        <label for="account-id">Customer ID (Read-only):</label>
+                        <input type="text" id="account-id" name="account_id" value="CUST-12345" readonly>
+                    </p>
+                </fieldset>
+                
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Enhanced Forms. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
